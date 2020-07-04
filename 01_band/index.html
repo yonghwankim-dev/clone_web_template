@@ -55,8 +55,8 @@
       <!--The Band Section-->
       <div class="content__band">
         <h2>THE BAND</h2>
-        <h5>We love music</h5>
-        <p>
+        <p class="band__title">We love music</p>
+        <p class="band__content">
           We have created a fictional band website. Lorem ipsum dolor sit amet,
           consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
           labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -85,36 +85,50 @@
         </div>
       </div>
       <!--Tour Section-->
-      <div class="content__tour">
-        <h3>TOUR DATES</h3>
-        <p>Remember to book your tickets!</p>
-        <ul class="tour__date">
-          <li class="tour__month">September<span>Sold out</span></li>
-          <li class="tour__month">October<span>Sold out</span></li>
-          <li class="tour__month">November<span>3</span></li>
-        </ul>
+      <div class="content__black">
+        <div class="content__tour">
+          <h3 class="content__tour__title">TOUR DATES</h3>
+          <p class="content__tour__p">Remember to book your tickets!</p>
+          <ul class="tour__date">
+            <li class="tour__month">
+              September<span class="tour__sold">Sold out</span>
+            </li>
+            <li class="tour__month">
+              October<span class="tour__sold">Sold out</span>
+            </li>
+            <li class="tour__month">
+              November<span class="tour__badge">3</span>
+            </li>
+          </ul>
 
-        <div class="tour__tickets">
-          <div class="tour__ticket">
-            <img src="images/newyork.jpg" alt="" />
-            <h5>New York</h5>
-            <p>Fri 27 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus utrutrum sed viate justo</p>
-            <button>Buy Tickets</button>
-          </div>
-          <div class="tour__ticket">
-            <img src="images/paris.jpg" alt="" />
-            <h5>Paris</h5>
-            <p>Sat 28 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus utrutrum sed viate justo</p>
-            <button>Buy Tickets</button>
-          </div>
-          <div class="tour__ticket">
-            <img src="images/sanfran.jpg" alt="" />
-            <h5>San Francisco</h5>
-            <p>Sun 29 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus utrutrum sed viate justo</p>
-            <button>Buy Tickets</button>
+          <div class="tour__tickets">
+            <div class="tour__ticket">
+              <img class="ticket__img" src="images/newyork.jpg" alt="" />
+              <div class="ticket__content">
+                <h5>New York</h5>
+                <p class="ticket__date">Fri 27 Nov 2016</p>
+                <p>Praesent tincidunt sed tellus utrutrum sed viate justo</p>
+                <button class="w3-button">Buy Tickets</button>
+              </div>
+            </div>
+            <div class="tour__ticket">
+              <img class="ticket__img" src="images/paris.jpg" alt="" />
+              <div class="ticket__content">
+                <h5>Paris</h5>
+                <p class="ticket__date">Sat 28 Nov 2016</p>
+                <p>Praesent tincidunt sed tellus utrutrum sed viate justo</p>
+                <button class="w3-button">Buy Tickets</button>
+              </div>
+            </div>
+            <div class="tour__ticket">
+              <img class="ticket__img" src="images/sanfran.jpg" alt="" />
+              <div class="ticket__content">
+                <h5>San Francisco</h5>
+                <p class="ticket__date">Sun 29 Nov 2016</p>
+                <p>Praesent tincidunt sed tellus utrutrum sed viate justo</p>
+                <button class="w3-button">Buy Tickets</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

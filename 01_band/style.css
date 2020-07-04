@@ -1,6 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 html,
 body {
+  box-sizing: border-box;
   font-size: 15px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  margin: 10px 0;
 }
 
 /*header section*/
@@ -75,6 +94,30 @@ body {
 /*end slides section*/
 
 /*band section*/
+.content__band {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.content__band h2 {
+  font-size: 30px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.content__band .band__title {
+  opacity: 0.6;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.content__band .band__content {
+  margin: 15px 0;
+  text-align: justify !important;
+  box-sizing: inherit;
+}
+
 .content__band__profiles {
   display: flex;
   padding: 32px 0px;
@@ -91,3 +134,122 @@ body {
   margin: 15px 0px;
 }
 /*end band section*/
+
+/*start tour section*/
+.content__black {
+  background-color: black;
+}
+.content__tour {
+  max-width: 800px;
+
+  color: white;
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 64px 16px;
+}
+
+.content__tour .content__tour__title {
+  font-size: 30px;
+  margin: 10px 0;
+  letter-spacing: 4px;
+}
+
+.content__tour .content__tour__p {
+  font-style: italic;
+  opacity: 0.6;
+  margin: 15px 0;
+}
+
+.content__tour .tour__month {
+  background-color: white;
+  padding: 8px 16px;
+  color: #757575;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.tour__month .tour__sold {
+  background-color: red !important;
+  color: white !important;
+  margin-left: 16px;
+  padding: 0 8px;
+}
+
+.tour__month .tour__badge {
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  padding: 0px 8px;
+  margin-right: 16px !important;
+  float: right;
+}
+
+.tour__tickets {
+  padding: 32px 8px !important;
+  margin: 0 -16px;
+  box-sizing: inherit;
+}
+
+.tour__tickets::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tour__tickets .tour__ticket {
+  padding: 0 8px;
+  margin-bottom: 16px !important;
+  float: left;
+}
+
+.tour__ticket .ticket__img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+@media (min-width: 601px) {
+  .tour__ticket {
+    width: 33.3%;
+  }
+}
+
+.tour__ticket .ticket__content {
+  color: black !important;
+  background-color: white !important;
+  padding: 0.01em 16px;
+  float: left;
+  text-align: left;
+}
+
+.tour__ticket h5,
+p {
+  font-size: 15px;
+  margin: 15px 0;
+}
+
+.tour__ticket .ticket__date {
+  opacity: 0.6;
+}
+
+.tour__ticket button {
+  margin-bottom: 16px !important;
+  color: white !important;
+  background-color: black !important;
+  float: left;
+}
+
+.w3-button {
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+/*end tour section*/
