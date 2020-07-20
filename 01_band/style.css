@@ -6,9 +6,10 @@
 
 html,
 body {
-  box-sizing: border-box;
   font-size: 15px;
   line-height: 1.5;
+  margin: 0;
+  font-family: "Lato", sans-serif;
 }
 
 h1,
@@ -22,44 +23,91 @@ h6 {
   margin: 10px 0;
 }
 
-/*header section*/
-.header {
-  display: flex;
-  background-color: black;
-  justify-content: space-between;
+/*top section*/
+.top {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  height: 45px;
+  top: 0;
 }
 
-.header a {
-  color: white;
+.top .top__bar {
+  color: #fff !important;
+  background-color: black !important;
+  width: 100%;
+  overflow: hidden;
+}
+
+.top__bar .top__bar__item {
   text-decoration: none;
-  font-size: 15px;
+  white-space: normal;
+  float: left;
+  width: auto;
+  border: none;
+  display: block;
+  outline: 0;
+  padding: 12px 24px !important;
+  color: inherit;
+  overflow: hidden;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
 }
 
-.header__nav {
-  display: flex;
+.top__bar .top__bar__dropdown {
+  position: static;
+  display: inline-block;
+  cursor: pointer;
 }
 
-.nav__item {
-  padding: 12px 24px;
+.top__bar__dropdown .top__bar__dropdown__button {
+  background-color: red;
+  padding: 12px 24px !important;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
 }
 
-.header .header__search {
-  padding: 12px 24px;
+.top__bar .top__bar__search {
+  float: right;
+  padding: 12px 24px !important;
+  color: inherit;
+  background-color: transparent;
 }
-/*end header*/
+
+/*end top*/
 
 /*content section*/
+.content {
+  max-width: 2000px;
+  margin-top: 46px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*slides section*/
 .content__slide:nth-child(1) {
   display: block;
+  text-align: center !important;
 }
 
 .content__slide:nth-child(2) {
   display: none;
+  text-align: center !important;
 }
 
 .content__slide:nth-child(3) {
   display: none;
+  text-align: center !important;
 }
 
 .content__slide {
@@ -81,12 +129,12 @@ h6 {
   line-height: 1.5;
 }
 
-.content__slide .slide__bottommiddle h3 {
+.slide__bottommiddle h3 {
   margin: 10px 0;
   font-size: 24px;
 }
 
-.content__slide .slide__bottommiddle p {
+.slide__bottommiddle p {
   margin: 15px 0;
   font-size: 15px;
 }
@@ -99,20 +147,25 @@ h6 {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-}
-.content__band h2 {
-  font-size: 30px;
-  letter-spacing: 4px;
-  text-align: center;
+  padding: 64px 16px !important;
 }
 
-.content__band .band__title {
+.content__band h2 {
+  font-size: 30px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  letter-spacing: 4px;
+  text-align: center;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.content__band .content__band__title {
   opacity: 0.6;
   margin: 15px 0;
   text-align: center;
 }
 
-.content__band .band__content {
+.content__band .content__band__content {
   margin: 15px 0;
   text-align: justify !important;
   box-sizing: inherit;
@@ -124,12 +177,24 @@ h6 {
   justify-content: space-around;
 }
 
-.profiles_item img {
+.content__band__profiles::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content__band__profiles::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content__band__profiles__item img {
   width: 153px;
   height: 153px;
 }
 
-.profiles_item p {
+.content__band__profiles__item p {
   text-align: center;
   margin: 15px 0px;
 }
@@ -141,9 +206,7 @@ h6 {
 }
 .content__tour {
   max-width: 800px;
-
   color: white;
-  text-align: center !important;
   margin-left: auto;
   margin-right: auto;
   padding: 64px 16px;
@@ -153,30 +216,40 @@ h6 {
   font-size: 30px;
   margin: 10px 0;
   letter-spacing: 4px;
+  text-align: center !important;
 }
 
 .content__tour .content__tour__p {
   font-style: italic;
   opacity: 0.6;
   margin: 15px 0;
+  text-align: center !important;
 }
 
-.content__tour .tour__month {
-  background-color: white;
-  padding: 8px 16px;
-  color: #757575;
+.content__tour .content__tour__date {
+  color: #757575 !important;
+  background-color: #fff !important;
+  border: 1px solid #ccc !important;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.content__tour__date .tour__date__month {
+  padding: 8px 16px !important;
   border-bottom: 1px solid #ddd;
-  text-align: left;
 }
 
-.tour__month .tour__sold {
-  background-color: red !important;
+.tour__date__month .date__month__sold {
+  background-color: #f44336 !important;
   color: white !important;
   margin-left: 16px;
   padding: 0 8px;
+  text-align: center;
+  display: inline-block;
 }
 
-.tour__month .tour__badge {
+.tour__date__month .date__month__badge {
   background-color: black;
   color: white;
   border-radius: 50%;
@@ -185,19 +258,18 @@ h6 {
   float: right;
 }
 
-.tour__tickets {
+.content__tour .content__tour__tickets {
   padding: 32px 8px !important;
   margin: 0 -16px;
-  box-sizing: inherit;
 }
 
-.tour__tickets::after {
+.content__tour .content__tour__tickets::after {
   content: "";
   display: table;
   clear: both;
 }
 
-.tour__tickets .tour__ticket {
+.content__tour__tickets .tour__ticket {
   padding: 0 8px;
   margin-bottom: 16px !important;
   float: left;
@@ -319,6 +391,13 @@ p {
   padding: 8px 16px;
   float: right !important;
 }
+
+.content__contact .contact__info::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /*end contact section*/
 
 /*start footer*/

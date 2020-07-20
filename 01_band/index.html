@@ -7,27 +7,28 @@
       src="https://kit.fontawesome.com/f3e90f406f.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="reset.css" />
+    <!--<link rel="stylesheet" href="reset.css" />-->
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <header class="header">
-      <div class="header__column">
-        <ul class="header__nav">
-          <li class="nav__item"><a href="#">HOME</a></li>
-          <li class="nav__item"><a href="#">BAND</a></li>
-          <li class="nav__item"><a href="#">TOUR</a></li>
-          <li class="nav__item"><a href="#">CONTACT</a></li>
-          <li class="nav__item"><a href="#">MORE</a></li>
-        </ul>
-      </div>
-      <div class="header__column">
-        <div class="header__search">
-          <a href="#"><i class="fas fa-search"></i></a>
+    <div class="top">
+      <div class="top__bar">
+        <a href="#" class="top__bar__item">HOME</a>
+        <a href="#" class="top__bar__item">BAND</a>
+        <a href="#" class="top__bar__item">TOUR</a>
+        <a href="#" class="top__bar__item">CONTACT</a>
+        <div class="top__bar__dropdown">
+          <button class="top__bar__dropdown__button" title="More">
+            MORE
+            <i class="fas fa-chevron-down"></i>
+          </button>
         </div>
+        <a href="#" class="top__bar__search">
+          <i class="fas fa-search"></i>
+        </a>
       </div>
-    </header>
+    </div>
     <div class="content">
       <!--Automatic SlideShow Images-->
       <div class="content__slide">
@@ -55,8 +56,8 @@
       <!--The Band Section-->
       <div class="content__band">
         <h2>THE BAND</h2>
-        <p class="band__title">We love music</p>
-        <p class="band__content">
+        <p class="content__band__title">We love music</p>
+        <p class="content__band__content">
           We have created a fictional band website. Lorem ipsum dolor sit amet,
           consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
           labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -70,38 +71,40 @@
           consequat.
         </p>
         <div class="content__band__profiles">
-          <div class="profiles_item">
+          <div class="content__band__profiles__item">
             <p>Name</p>
             <img src="images/bandmember.jpg" alt="" />
           </div>
-          <div class="profiles_item">
+          <div class="content__band__profiles__item">
             <p>Name</p>
             <img src="images/bandmember.jpg" alt="" />
           </div>
-          <div class="profiles_item">
+          <div class="content__band__profiles__item">
             <p>Name</p>
             <img src="images/bandmember.jpg" alt="" />
           </div>
         </div>
       </div>
+
       <!--Tour Section-->
       <div class="content__black">
         <div class="content__tour">
           <h3 class="content__tour__title">TOUR DATES</h3>
           <p class="content__tour__p">Remember to book your tickets!</p>
-          <ul class="tour__date">
-            <li class="tour__month">
-              September<span class="tour__sold">Sold out</span>
+          <br />
+          <ul class="content__tour__date">
+            <li class="tour__date__month">
+              September<span class="date__month__sold">Sold out</span>
             </li>
-            <li class="tour__month">
-              October<span class="tour__sold">Sold out</span>
+            <li class="tour__date__month">
+              October<span class="date__month__sold">Sold out</span>
             </li>
-            <li class="tour__month">
-              November<span class="tour__badge">3</span>
+            <li class="tour__date__month">
+              November<span class="date__month__badge">3</span>
             </li>
           </ul>
 
-          <div class="tour__tickets">
+          <div class="content__tour__tickets">
             <div class="tour__ticket">
               <img class="ticket__img" src="images/newyork.jpg" alt="" />
               <div class="ticket__content">
