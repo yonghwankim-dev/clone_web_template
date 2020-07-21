@@ -1,6 +1,6 @@
 *,
-*::before,
-*::after {
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -10,6 +10,7 @@ body {
   line-height: 1.5;
   margin: 0;
   font-family: "Lato", sans-serif;
+  box-sizing: border-box;
 }
 
 h1,
@@ -82,6 +83,51 @@ h6 {
   padding: 12px 24px !important;
   color: inherit;
   background-color: transparent;
+}
+
+.top__bar .top__bar__search:hover {
+  background-color: red;
+}
+
+.top__bar .top__bar__item:hover,
+.top__bar__dropdown:hover {
+  background-color: #ccc;
+  color: black;
+}
+
+.top__bar__dropdown .dropdown__content {
+  cursor: auto;
+  color: #000;
+  background-color: #fff;
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.top__bar__dropdown:hover .dropdown__content {
+  display: block;
+}
+
+.dropdown__content .dropdown__content__item {
+  width: 100%;
+  display: block;
+  padding: 8px 16px;
+  text-align: left;
+  border: none;
+  white-space: normal;
+  float: none;
+  outline: 0;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+}
+
+.dropdown__content .dropdown__content__item:hover {
+  background-color: #ccc;
+  display: block;
 }
 
 /*end top*/
@@ -204,6 +250,7 @@ h6 {
 .content__black {
   background-color: black;
 }
+
 .content__tour {
   max-width: 800px;
   color: white;
@@ -259,8 +306,16 @@ h6 {
 }
 
 .content__tour .content__tour__tickets {
-  padding: 32px 8px !important;
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+  padding: 0 8px;
   margin: 0 -16px;
+}
+
+.content__tour .content__tour__tickets::before {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .content__tour .content__tour__tickets::after {
@@ -336,12 +391,12 @@ p {
   margin-right: auto;
 }
 
-.content__contact .contact__info {
+.content__contact .content__contact__info {
   padding: 32px 0 !important;
 }
 
 /*start contact section*/
-.content__contact .contact__p {
+.content__contact .content__contact__p {
   font-size: 15px;
   margin: 15px 0;
 }
