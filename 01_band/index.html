@@ -116,7 +116,7 @@
                 <h5>New York</h5>
                 <p class="ticket__date">Fri 27 Nov 2016</p>
                 <p>Praesent tincidunt sed tellus utrutrum sed viate justo</p>
-                <button class="w3-button">Buy Tickets</button>
+                <button class="w3-button ticket__buy">Buy Tickets</button>
               </div>
             </div>
             <div class="tour__ticket">
@@ -125,7 +125,7 @@
                 <h5>Paris</h5>
                 <p class="ticket__date">Sat 28 Nov 2016</p>
                 <p>Praesent tincidunt sed tellus utrutrum sed viate justo</p>
-                <button class="w3-button">Buy Tickets</button>
+                <button class="w3-button ticket__buy">Buy Tickets</button>
               </div>
             </div>
             <div class="tour__ticket">
@@ -134,13 +134,40 @@
                 <h5>San Francisco</h5>
                 <p class="ticket__date">Sun 29 Nov 2016</p>
                 <p>Praesent tincidunt sed tellus utrutrum sed viate justo</p>
-                <button class="w3-button">Buy Tickets</button>
+                <button class="w3-button ticket__buy">Buy Tickets</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-
+      <!--ticket model-->
+      <div class="content__tour__ticket" style="display: none;">
+        <div class="tour__ticket__content">
+          <header class="ticket__content__header">
+            <span class="header__close-button js_close">
+              X
+            </span>
+            <h2 class="header__h">
+              <i class="fas fa-suitcase"></i>
+              Tickets
+            </h2>
+          </header>
+          <div class="ticket__content__container">
+            <p>
+              <i class="fas fa-shopping-cart"></i>
+              Tickets, $15 per person
+            </p>
+            <input type="text" placeholder="How many?" />
+            <p><i class="fas fa-user"></i> Send To</p>
+            <input type="text" placeholder="Enter email" />
+            <button class="content__container__pay">
+              Pay <i class="fas fa-check"></i>
+            </button>
+            <button class="content__container__close js_close">Close X</button>
+            <p class="content__container__help">Need <a href="#">help?</a></p>
+          </div>
+        </div>
+      </div>
       <!--contact section-->
       <div class="content__contact">
         <h2>CONTACT</h2>
@@ -154,14 +181,26 @@
           <div class="contact__column">
             <div class="contact__row">
               <div class="contact__input__column">
-                <input type="text" placeholder="Name" class="contact_input" />
+                <input
+                  type="text"
+                  placeholder="Name"
+                  class="contact_input js_name"
+                />
               </div>
               <div class="contact__input__column">
-                <input type="text" placeholder="Email" class="contact_input" />
+                <input
+                  type="text"
+                  placeholder="Email"
+                  class="contact_input js_email"
+                />
               </div>
             </div>
-            <input type="text" placeholder="Message" class="contact_input" />
-            <button class="w3-button contact__btn">SEND</button>
+            <input
+              type="text"
+              placeholder="Message"
+              class="contact_input js_message"
+            />
+            <button class="w3-button contact__btn js_send">SEND</button>
           </div>
         </div>
       </div>
