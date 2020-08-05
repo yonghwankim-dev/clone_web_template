@@ -1,12 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+
   font-family: "Times New Roman", Georgia, Serif;
   line-height: 1.5;
 }
 
+hr {
+  border: 0;
+  border: 1px solid #eee;
+  margin: 10px 0;
+}
+
+/*start navigation section */
 .nav {
   background-color: #ffffff !important;
   width: 100%;
@@ -34,3 +45,193 @@ body {
 .header .header__hamburger {
   width: 100%;
 }
+/*end navigation section */
+
+/*start header section*/
+.header {
+  position: relative;
+}
+
+.header .header__title {
+  position: absolute;
+  bottom: 0;
+  padding: 12px 24px !important;
+  letter-spacing: 5px;
+}
+
+.header__title .header__title__h {
+  opacity: 0.6;
+  font-family: "Playfair Display";
+  font-weight: 400;
+}
+/*end header section*/
+
+/*start content section*/
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1100px;
+  box-sizing: inherit;
+}
+
+/*start about section*/
+.content .content__about {
+  padding: 64px 0px !important;
+  box-sizing: inherit;
+}
+
+.content .content__about::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content .content__about::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.content__about .content__about__column,
+.content__menu .content__menu__column {
+  padding: 12px 24px !important;
+  box-sizing: inherit;
+  float: left;
+}
+
+@media (min-width: 601px) {
+  .content__about__column,
+  .content__menu__column {
+    width: 49.9%;
+  }
+}
+
+.content__about__column img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  opacity: 0.75;
+}
+
+.content__about__column .content__about__h {
+  text-align: center !important;
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.content__about__column .content__about__title {
+  text-align: center !important;
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.content__about__column .content__about__p {
+  margin: 18px 0;
+  font-size: 18px !important;
+}
+/*end about section*/
+
+/*start menu section*/
+.content .content__menu {
+  padding: 64px 0px !important;
+}
+
+.content .content__menu::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content .content__menu::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content__menu__column .content__menu__h1,
+.content__menu__h2 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+  font-weight: 400;
+  margin: 10px 0;
+  box-sizing: inherit;
+}
+
+.content__menu__column .content__menu__h1 {
+  text-align: center !important;
+}
+
+.content__menu__column .content__menu__p {
+  margin: 15px 0;
+  font-size: 15px;
+}
+
+.content__menu__column img {
+  width: 100%;
+  opacity: 0.75;
+  border-radius: 4px;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-style: none;
+}
+/*end menu section*/
+
+/*start contact section*/
+.content .content__contact {
+  padding: 64px 16px !important;
+}
+
+.content .content__contact::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content .content__contact::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content__contact .content__contact__h1 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+  font-weight: 400;
+  margin: 10px 0;
+  box-sizing: inherit;
+}
+
+.content__contact input {
+  padding: 16px 8px !important;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+.content__contact__p .content__contact__send {
+  color: #000 !important;
+  background-color: #f1f1f1 !important;
+  margin: 16px 0 !important;
+  padding: 8px 16px !important;
+  border: none;
+}
+/*end contact section*/
+/*end content section*/
+
+/*start footer section*/
+.footer {
+  color: #000 !important;
+  background-color: #f1f1f1 !important;
+  padding: 32px 0px !important;
+  text-align: center !important;
+  display: block;
+}
+/*end footer section*/
